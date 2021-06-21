@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_boxicons/flutter_boxicons.dart';
 import 'package:ux1/model/destination.dart';
@@ -14,6 +16,8 @@ class DestScreen extends StatelessWidget {
           padding: const EdgeInsets.all(30.0),
           child: Container(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Stack(
                   children: [
@@ -45,7 +49,7 @@ class DestScreen extends StatelessWidget {
                           ),
                           child: Center(
                             child: Icon(
-                              Icons.arrow_back_ios_new,
+                              Icons.arrow_back_ios,
                               color: Colors.white,
                             ),
                           ),
@@ -71,19 +75,22 @@ class DestScreen extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      bottom: 80,
+                      bottom: 70,
                       left: 15,
-                      child: Text(
-                        dest.destName,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 33,
-                          color: Colors.white,
+                      child: Container(
+                        width: 200,
+                        child: Text(
+                          dest.destName,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 33,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
                     Positioned(
-                      bottom: 40,
+                      bottom: 30,
                       left: 15,
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.baseline,
@@ -104,8 +111,62 @@ class DestScreen extends StatelessWidget {
                         ],
                       ),
                     ),
+                    Positioned(
+                      bottom: 30,
+                      right: 15,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          color: Colors.grey.withOpacity(0.7),
+                        ),
+                        width: 85,
+                        height: 45,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                            SizedBox(
+                              width: 2,
+                            ),
+                            Text(
+                              '4.9',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
-                )
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: 10.0,
+                    bottom: 10.0,
+                  ),
+                  child: Text(
+                    'About',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 23,
+                    ),
+                  ),
+                ),
+                Text(
+                  dest.destDescription,
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 16,
+                    height: 1.5,
+                  ),
+                ),
               ],
             ),
           ),

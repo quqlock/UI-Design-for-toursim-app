@@ -254,13 +254,16 @@ class _MyHomePageState extends State<MyHomePage> {
                                                 crossAxisAlignment:
                                                     CrossAxisAlignment.start,
                                                 children: [
-                                                  Text(
-                                                    dest.destName,
-                                                    style: TextStyle(
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 23,
+                                                  Container(
+                                                    width: 150,
+                                                    child: Text(
+                                                      dest.destName,
+                                                      style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 23,
+                                                      ),
                                                     ),
                                                   ),
                                                   SizedBox(

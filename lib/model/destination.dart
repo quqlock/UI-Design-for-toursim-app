@@ -12,10 +12,10 @@ class Destination {
 
 List<Destination> destinationsList = [
   Destination(
-      'Dream home',
+      'Bali White Temple',
       'Kuta Utara',
       'Bali',
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque nisl vel nisl sollicitudin iaculis. Donec eget sem a urna sagittis feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Ut tincidunt nisi massa, vel sollicitudin ante hendrerit et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec interdum venenatis mattis. Etiam eu augue vitae dui eleifend mattis a at enim. Morbi porttitor tortor sit amet nisl tincidunt sagittis. Sed tincidunt vel augue at ultricies. Nullam eget gravida lorem. Vestibulum odio lacus, facilisis vitae neque vel, imperdiet tincidunt libero.',
+      'Modern destinations, with sky landscape, Simple Building, and perfect for photos.',
       200,
       'assets/img/dest1.jpg'),
   Destination(
