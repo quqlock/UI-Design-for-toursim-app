@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'UX Design Project 1',
+      title: 'UI Design Project 1',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -178,7 +178,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                     height: 30,
                                     child: Center(
                                       child: Text(
-                                        '\$' + dest.destPrice.toString(),
+                                        '\$' +
+                                            dest.destPrice.toStringAsFixed(0),
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold,
@@ -214,8 +215,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                               ', ' +
                                               dest.destCountry,
                                           style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 15),
+                                            color: Colors.white,
+                                            fontSize: 15,
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -230,7 +232,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 10),
+                padding: EdgeInsets.only(top: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -254,6 +256,58 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                   ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10.0),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      for (Destination dest in destinationsList)
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: GestureDetector(
+                            child: Container(
+                              height: 80,
+                              width: 160,
+                              child: Row(
+                                children: [
+                                  ClipRRect(
+                                    child: Image.asset(dest.destImg),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 5.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          dest.destAddress,
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Text(
+                                          dest.destCountry,
+                                          style: TextStyle(color: Colors.grey),
+                                        ),
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        )
+                    ],
+                  ),
                 ),
               ),
             ],
