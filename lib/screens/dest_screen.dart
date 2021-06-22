@@ -1,13 +1,11 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_boxicons/flutter_boxicons.dart';
 import 'package:ux1/const.dart';
 import 'package:ux1/model/destination.dart';
 import 'package:ux1/widgets/title_widget.dart';
 
 class DestScreen extends StatelessWidget {
-  Destination dest;
+  final Destination dest;
   DestScreen(this.dest);
 
   @override
@@ -65,6 +63,7 @@ class DestScreen extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
+                    letterSpacing: 1.3,
                   ),
                 ),
                 Spacer(),
