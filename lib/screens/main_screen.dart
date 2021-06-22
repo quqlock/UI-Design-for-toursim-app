@@ -220,7 +220,7 @@ class MainScreen extends StatelessWidget {
 
   Widget buildSearchWidget() {
     return Padding(
-      padding: const EdgeInsets.only(top: 25),
+      padding: const EdgeInsets.only(top: 15),
       child: Row(
         children: [
           Expanded(
@@ -293,10 +293,26 @@ class MainScreen extends StatelessWidget {
             ),
           ),
         ),
-        Icon(
-          Icons.notifications,
-          size: 30,
-          color: colorGrey,
+        Stack(
+          children: [
+            Icon(
+              Icons.notifications,
+              size: 30,
+              color: colorGrey,
+            ),
+            Positioned(
+              top: 1,
+              right: 3,
+              child: Container(
+                width: 10,
+                height: 10,
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  shape: BoxShape.circle,
+                ),
+              ),
+            )
+          ],
         ),
       ],
     );
