@@ -50,7 +50,7 @@ class MainScreen extends StatelessWidget {
                               Text(
                                 'Welcome',
                                 style: TextStyle(
-                                  color: Colors.grey,
+                                  color: colorGrey,
                                   fontSize: 15,
                                 ),
                               ),
@@ -59,9 +59,10 @@ class MainScreen extends StatelessWidget {
                                 child: Text(
                                   'Adam Miauczyński',
                                   style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
+                                    color: colorNavy,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
                             ],
@@ -71,7 +72,7 @@ class MainScreen extends StatelessWidget {
                       Icon(
                         Icons.notifications,
                         size: 30,
-                        color: Colors.grey,
+                        color: colorGrey,
                       ),
                     ],
                   ),
@@ -118,11 +119,8 @@ class MainScreen extends StatelessWidget {
                       children: [
                         Expanded(
                           child: Text(
-                            'Reccomended',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 23,
-                            ),
+                            'Recommended',
+                            style: catStyle,
                           ),
                         ),
                         Padding(
@@ -131,7 +129,7 @@ class MainScreen extends StatelessWidget {
                           ),
                           child: Icon(
                             Icons.more_horiz,
-                            color: Colors.grey,
+                            color: colorGrey,
                           ),
                         ),
                       ],
@@ -247,10 +245,7 @@ class MainScreen extends StatelessWidget {
                         Expanded(
                           child: Text(
                             'Top Destination',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 23,
-                            ),
+                            style: catStyle,
                           ),
                         ),
                         Padding(
@@ -259,7 +254,7 @@ class MainScreen extends StatelessWidget {
                           ),
                           child: Icon(
                             Icons.more_horiz,
-                            color: Colors.grey,
+                            color: colorGrey,
                           ),
                         ),
                       ],
@@ -304,6 +299,7 @@ class MainScreen extends StatelessWidget {
                                             Text(
                                               dest.destAddress,
                                               style: TextStyle(
+                                                color: colorNavy,
                                                 fontWeight: FontWeight.bold,
                                               ),
                                             ),
@@ -312,8 +308,9 @@ class MainScreen extends StatelessWidget {
                                             ),
                                             Text(
                                               dest.destCountry,
-                                              style:
-                                                  TextStyle(color: Colors.grey),
+                                              style: TextStyle(
+                                                color: colorGrey,
+                                              ),
                                             ),
                                           ],
                                         ),
@@ -333,13 +330,13 @@ class MainScreen extends StatelessWidget {
           ),
         ),
         Container(
-          color: Colors.yellow,
+          color: colorGrey,
         ),
         Container(
-          color: Colors.red,
+          color: colorGrey,
         ),
         Container(
-          color: Colors.yellow,
+          color: colorGrey,
         ),
       ],
     );
@@ -354,11 +351,11 @@ class MainScreen extends StatelessWidget {
         top: 20,
       ),
       child: TabBar(
-        labelColor: Theme.of(context).primaryColor,
-        unselectedLabelColor: Colors.black38,
+        labelColor: colorBlue,
+        unselectedLabelColor: colorGrey,
         indicatorSize: TabBarIndicatorSize.label,
         indicatorPadding: EdgeInsets.all(5.0),
-        indicatorColor: Theme.of(context).primaryColor,
+        indicatorColor: colorBlue,
         tabs: [
           Tab(
             icon: Icon(

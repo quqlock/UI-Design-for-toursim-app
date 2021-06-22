@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_boxicons/flutter_boxicons.dart';
+import 'package:ux1/const.dart';
 import 'package:ux1/model/destination.dart';
 
 class DestScreen extends StatelessWidget {
@@ -118,7 +119,7 @@ class DestScreen extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(18),
-                            color: Colors.grey.withOpacity(0.7),
+                            color: colorGrey.withOpacity(0.7),
                           ),
                           width: 85,
                           height: 45,
@@ -154,16 +155,13 @@ class DestScreen extends StatelessWidget {
                     ),
                     child: Text(
                       'About',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 23,
-                      ),
+                      style: catStyle,
                     ),
                   ),
                   Text(
                     dest.destDescription,
                     style: TextStyle(
-                      color: Colors.grey,
+                      color: colorGrey,
                       fontSize: 16,
                       height: 1.5,
                     ),
@@ -175,10 +173,7 @@ class DestScreen extends StatelessWidget {
                     ),
                     child: Text(
                       'Gallery',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 23,
-                      ),
+                      style: catStyle,
                     ),
                   ),
                   Row(
