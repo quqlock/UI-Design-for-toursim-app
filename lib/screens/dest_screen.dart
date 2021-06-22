@@ -27,7 +27,7 @@ class DestScreen extends StatelessWidget {
                   buildDescWidget(),
                   buildTitleWidget('Gallery', 20),
                   buildGalleryWidget(),
-                  buildBigButtonWidget(context)
+                  buildBigButtonWidget(context, 'Book now'),
                 ],
               ),
             ),
@@ -37,7 +37,7 @@ class DestScreen extends StatelessWidget {
     );
   }
 
-  Widget buildBigButtonWidget(BuildContext context) {
+  Widget buildBigButtonWidget(BuildContext context, String buttonText) {
     return Padding(
       padding: const EdgeInsets.only(top: 20.0),
       child: ConstrainedBox(
@@ -61,7 +61,7 @@ class DestScreen extends StatelessWidget {
               children: [
                 Spacer(),
                 Text(
-                  'Book now',
+                  buttonText,
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -78,65 +78,60 @@ class DestScreen extends StatelessWidget {
   }
 
   Widget buildGalleryWidget() {
+    Widget _buildGalleryPhoto(bool extraPhotos) {
+      return Container(
+        width: 70,
+        height: 70,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: Stack(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                image: DecorationImage(
+                  fit: BoxFit.fill,
+                  image: AssetImage(
+                    dest.destImg,
+                  ),
+                ),
+              ),
+            ),
+            extraPhotos
+                ? Container(
+                    decoration: BoxDecoration(
+                      color: Colors.black.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                  )
+                : Container(),
+            extraPhotos
+                ? Positioned(
+                    child: Center(
+                      child: Text(
+                        '+6',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  )
+                : Container(),
+          ],
+        ),
+      );
+    }
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
-          width: 70,
-          height: 70,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-          ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(15),
-            child: Image.asset(
-              dest.destImg,
-              fit: BoxFit.fitWidth,
-            ),
-          ),
-        ),
-        Container(
-          width: 70,
-          height: 70,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-          ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(15),
-            child: Image.asset(
-              dest.destImg,
-              fit: BoxFit.fitWidth,
-            ),
-          ),
-        ),
-        Container(
-          width: 70,
-          height: 70,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-          ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(15),
-            child: Image.asset(
-              dest.destImg,
-              fit: BoxFit.fitWidth,
-            ),
-          ),
-        ),
-        Container(
-          width: 70,
-          height: 70,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-          ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(15),
-            child: Image.asset(
-              dest.destImg,
-              fit: BoxFit.fitWidth,
-            ),
-          ),
-        ),
+        _buildGalleryPhoto(false),
+        _buildGalleryPhoto(false),
+        _buildGalleryPhoto(false),
+        _buildGalleryPhoto(true),
       ],
     );
   }
