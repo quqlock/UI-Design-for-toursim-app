@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_boxicons/flutter_boxicons.dart';
 import 'package:ux1/const.dart';
 import 'package:ux1/model/destination.dart';
+import 'package:ux1/widgets/title_widget.dart';
 
 class DestScreen extends StatelessWidget {
   Destination dest;
@@ -153,10 +154,7 @@ class DestScreen extends StatelessWidget {
                       top: 10.0,
                       bottom: 10.0,
                     ),
-                    child: Text(
-                      'About',
-                      style: catStyle,
-                    ),
+                    child: buildTitleWidget('About', 20),
                   ),
                   Text(
                     dest.destDescription,
@@ -171,10 +169,7 @@ class DestScreen extends StatelessWidget {
                       top: 20.0,
                       bottom: 15.0,
                     ),
-                    child: Text(
-                      'Gallery',
-                      style: catStyle,
-                    ),
+                    child: buildTitleWidget('Gallery', 20),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

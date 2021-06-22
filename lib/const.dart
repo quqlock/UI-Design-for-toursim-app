@@ -9,11 +9,4 @@ double iconSize = 30;
 //Colors
 var colorBlue = Color(0xFA1DA6FB);
 var colorNavy = Color(0xFA0F1546);
-var colorGrey = Color(0xFAe3e6eb);
-
-//Style
-var catStyle = TextStyle(
-  color: colorNavy,
-  fontWeight: FontWeight.bold,
-  fontSize: 23,
-);
+var colorGrey = Color(0xFAB2B3B6);
