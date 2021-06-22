@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'UI Design Project 1',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: 'Gilroy',
       ),
       home: MyHomePage(title: appTitle),
     );
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
 
-  String title;
+  final String title;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
