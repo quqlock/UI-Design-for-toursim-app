@@ -20,7 +20,7 @@ List<Destination> destinationsList = [
       'assets/img/dest1.jpg'),
   Destination(
       'Villa Beach',
-      'Kuta Utara',
+      'Masopalomas',
       'Bali Island',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque nisl vel nisl sollicitudin iaculis. Donec eget sem a urna sagittis feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Ut tincidunt nisi massa, vel sollicitudin ante hendrerit et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec interdum venenatis mattis. Etiam eu augue vitae dui eleifend mattis a at enim. Morbi porttitor tortor sit amet nisl tincidunt sagittis. Sed tincidunt vel augue at ultricies. Nullam eget gravida lorem. Vestibulum odio lacus, facilisis vitae neque vel, imperdiet tincidunt libero.',
       120,
