@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:ux1/const.dart';
 
-Widget buildCatNameWidget(String catName, double fontSize) {
+Widget buildTitleWidget(String catName, double fontSize) {
   var textStyle = TextStyle(
     color: colorNavy,
     fontWeight: FontWeight.bold,
     fontSize: fontSize,
   );
   return Padding(
-    padding: EdgeInsets.only(top: 10),
+    padding: EdgeInsets.only(top: 10, bottom: 10),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.end,
       crossAxisAlignment: CrossAxisAlignment.end,

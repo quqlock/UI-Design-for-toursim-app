@@ -281,7 +281,7 @@ class MainScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 3),
                   child: Text(
-                    'Adam Miauczyński',
+                    'Adam Kowalski',
                     style: TextStyle(
                       color: colorNavy,
                       fontSize: 18,
