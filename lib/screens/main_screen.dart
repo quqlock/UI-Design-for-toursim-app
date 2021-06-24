@@ -79,7 +79,7 @@ class MainScreen extends StatelessWidget {
                   },
                   child: Container(
                     height: 80,
-                    width: 160,
+                    width: 180,
                     child: Row(
                       children: [
                         ClipRRect(
