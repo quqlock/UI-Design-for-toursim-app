@@ -1,7 +1,11 @@
-
 # UI design for Flutter Travel App
 
 This project contains UI kit purely coded in Flutter framework for travel application. 
+
+# Screenshots
+
+![tourism1](https://user-images.githubusercontent.com/47597265/123241103-26494c00-d4e1-11eb-9dc6-88de601851e5.jpg)
+![tourism2](https://user-images.githubusercontent.com/47597265/123241110-277a7900-d4e1-11eb-8c3b-3fffd67a3563.jpg)
 
 # About project
 
