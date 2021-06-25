@@ -15,7 +15,7 @@ class Destination {
       required this.destImg});
 }
 
-List<Destination> destinationsList = [
+final List<Destination> destinationsList = [
   Destination(
       destName: 'Bali White Temple',
       destAddress: 'Kuta Utara',

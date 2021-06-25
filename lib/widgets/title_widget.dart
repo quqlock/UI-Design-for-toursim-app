@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ux1/const.dart';
 
 Widget buildTitleWidget(String catName, double fontSize) {
-  var textStyle = TextStyle(
+  TextStyle textStyleTitle = TextStyle(
     color: colorNavy,
     fontWeight: FontWeight.bold,
     fontSize: fontSize,
@@ -16,7 +16,7 @@ Widget buildTitleWidget(String catName, double fontSize) {
         Expanded(
           child: Text(
             catName,
-            style: textStyle,
+            style: textStyleTitle,
           ),
         ),
         Padding(
